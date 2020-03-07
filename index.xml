@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>浮世尘烟</title>
+    <link>https://gdzhu8023.github.io/</link>
+    <description>Recent content on 浮世尘烟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 28 Jul 2017 23:38:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://gdzhu8023.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>日常随记-2020-02-23</title>
+      <link>https://gdzhu8023.github.io/post/lifestyle20200223/</link>
+      <pubDate>Sun, 23 Feb 2020 13:41:49 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/lifestyle20200223/</guid>
+      <description>&lt;h1 id=&#34;日常随记&#34;&gt;日常随记&lt;/h1&gt;
+&lt;p&gt;好久不见！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>生活随记</title>
+      <link>https://gdzhu8023.github.io/post/lifestyle20171021/</link>
+      <pubDate>Sat, 21 Oct 2017 23:58:19 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/lifestyle20171021/</guid>
+      <description>&lt;h1 id=&#34;日常随记&#34;&gt;日常随记&lt;/h1&gt;
+&lt;p&gt;哟～又在写bug呢  （捂脸）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java程序员面试，基础真的很重要</title>
+      <link>https://gdzhu8023.github.io/post/javabasetolearn/</link>
+      <pubDate>Sat, 02 Sep 2017 23:58:32 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/javabasetolearn/</guid>
+      <description>&lt;h1 id=&#34;java程序员面试基础真的很重要&#34;&gt;Java程序员面试，基础真的很重要&lt;/h1&gt;
+&lt;p&gt;基础这东西，各个公司都很看重，尤其是大公司，他们看中人的潜力，他们舍得花精力去培养，所以基础是重中之重。&lt;br&gt;
+留作备用，慢慢复习填充。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java Map的几种遍历方式</title>
+      <link>https://gdzhu8023.github.io/post/javamapuse/</link>
+      <pubDate>Sat, 05 Aug 2017 22:07:23 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/javamapuse/</guid>
+      <description>&lt;p&gt;Java中Map的几种遍历方式&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>20个非常有用的Java程序片段</title>
+      <link>https://gdzhu8023.github.io/post/javaprogramfragment/</link>
+      <pubDate>Mon, 31 Jul 2017 22:18:13 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/javaprogramfragment/</guid>
+      <description>&lt;p&gt;下面是20个非常有用的Java程序片段，希望能对你有用。&lt;/p&gt;
+
+
+&lt;div class=&#34;pure-g&#34;&gt;
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-1&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;https://gdzhu8023.github.io/post/img/javaprogramfragment/java.jpg&#34;
+        alt=&#34; Img of java&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>在Github使用Hugo搭建个人博客</title>
+      <link>https://gdzhu8023.github.io/post/buildblog/</link>
+      <pubDate>Sat, 29 Jul 2017 21:33:13 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/buildblog/</guid>
+      <description>&lt;h1 id=&#34;在github使用hugo搭建个人博客&#34;&gt;在Github使用Hugo搭建个人博客&lt;/h1&gt;
+&lt;p&gt;Hugo是一个用Go语言编写的静态网站生成器，它使用起来非常简单，相对于Jekyll复杂的安装设置来说，Hugo仅需要一个二进制文件hugo(hugo.exe)即可轻松用于本地调试和生成静态页面。
+
+
+&lt;div class=&#34;pure-g&#34;&gt;
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-1&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;https://gdzhu8023.github.io/post/img/buildBlog/hugo.png&#34;
+        alt=&#34; Img of Hugo website&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+&lt;/div&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git常用命令笔记</title>
+      <link>https://gdzhu8023.github.io/post/usegit/</link>
+      <pubDate>Sat, 29 Jul 2017 17:22:50 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/usegit/</guid>
+      <description>&lt;h1 id=&#34;git常用命令笔记&#34;&gt;Git常用命令笔记&lt;/h1&gt;
+&lt;p&gt;Git是什么？&lt;/p&gt;
+&lt;p&gt;Git是目前世界上最先进的分布式版本控制系统（没有之一）。&lt;/p&gt;
+&lt;p&gt;Git有什么特点？简单来说就是：高端大气上档次！&lt;/p&gt;
+&lt;p&gt;那什么是版本控制系统？  好了，别闹~&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://gdzhu8023.github.io/contact/</link>
+      <pubDate>Fri, 28 Jul 2017 23:38:08 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/contact/</guid>
+      <description>联系方式  Zhu Guodong E-mail : defound1314@gmail.com E-mail : defound1314@163.com  </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://gdzhu8023.github.io/about/</link>
+      <pubDate>Fri, 28 Jul 2017 20:54:37 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/about/</guid>
+      <description>关于 个人博客  这浮世尘烟，白昼或长夜，城市或无涯荒野，逆着风与岁月悠远，不可追的春天。
+   之乎者也
+词/曲：罗大佑 编曲：罗大佑
+知之为知之　在乎不在乎 此人何其者　孔老夫子也
+知之为不知 在在不在乎
+此人何其者 寒山子是也
+不知为知之 不在乎在乎
+此人何其者 齐人是也
+很久以前我们的祖先都曾经这么说
+很久以前我们的祖先都曾经这么做
+现在听听我们的青年他们在唱什么
+但是要想想到底你要他们怎么做
+剪刀等待之 清汤挂面乎
+尊师重道者 莫过如此也
+风花雪月之 哗啦啦啦乎
+所谓你歌的 是否如此也
+之之之之之
+乎乎乎乎乎
+者者者者者
+也也也也也
+很久以前我们的祖先都曾经这么说
+很久以前我们的祖先都曾经这么做
+现在听听我们的青年他们在唱什么
+但是要想想到底你要他们怎么做
+眼睛睁一只 嘴巴呼一呼
+耳朵遮一遮 皆大欢喜也
+大家都知之 大家都在乎
+袖手旁观者 你我 是也
+袖手旁观者 你我 是也
+   Name : Zhu Guodong Location: Nanjing,JiangSu,China E-mail ：defound1314@gmail.com  </description>
+    </item>
+    
+    <item>
+      <title>First</title>
+      <link>https://gdzhu8023.github.io/post/first/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/first/</guid>
+      <description>第一篇博客  测试  </description>
+    </item>
+    
+  </channel>
+</rss>

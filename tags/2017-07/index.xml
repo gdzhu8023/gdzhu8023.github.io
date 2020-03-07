@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2017-07 on 浮世尘烟</title>
+    <link>https://gdzhu8023.github.io/tags/2017-07/</link>
+    <description>Recent content in 2017-07 on 浮世尘烟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 31 Jul 2017 22:18:13 +0800</lastBuildDate>
+    
+	<atom:link href="https://gdzhu8023.github.io/tags/2017-07/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>20个非常有用的Java程序片段</title>
+      <link>https://gdzhu8023.github.io/post/javaprogramfragment/</link>
+      <pubDate>Mon, 31 Jul 2017 22:18:13 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/javaprogramfragment/</guid>
+      <description>&lt;p&gt;下面是20个非常有用的Java程序片段，希望能对你有用。&lt;/p&gt;
+
+
+&lt;div class=&#34;pure-g&#34;&gt;
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-1&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;https://gdzhu8023.github.io/post/img/javaprogramfragment/java.jpg&#34;
+        alt=&#34; Img of java&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>在Github使用Hugo搭建个人博客</title>
+      <link>https://gdzhu8023.github.io/post/buildblog/</link>
+      <pubDate>Sat, 29 Jul 2017 21:33:13 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/buildblog/</guid>
+      <description>&lt;h1 id=&#34;在github使用hugo搭建个人博客&#34;&gt;在Github使用Hugo搭建个人博客&lt;/h1&gt;
+&lt;p&gt;Hugo是一个用Go语言编写的静态网站生成器，它使用起来非常简单，相对于Jekyll复杂的安装设置来说，Hugo仅需要一个二进制文件hugo(hugo.exe)即可轻松用于本地调试和生成静态页面。
+
+
+&lt;div class=&#34;pure-g&#34;&gt;
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-1&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;https://gdzhu8023.github.io/post/img/buildBlog/hugo.png&#34;
+        alt=&#34; Img of Hugo website&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+&lt;/div&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git常用命令笔记</title>
+      <link>https://gdzhu8023.github.io/post/usegit/</link>
+      <pubDate>Sat, 29 Jul 2017 17:22:50 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/usegit/</guid>
+      <description>&lt;h1 id=&#34;git常用命令笔记&#34;&gt;Git常用命令笔记&lt;/h1&gt;
+&lt;p&gt;Git是什么？&lt;/p&gt;
+&lt;p&gt;Git是目前世界上最先进的分布式版本控制系统（没有之一）。&lt;/p&gt;
+&lt;p&gt;Git有什么特点？简单来说就是：高端大气上档次！&lt;/p&gt;
+&lt;p&gt;那什么是版本控制系统？  好了，别闹~&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>First</title>
+      <link>https://gdzhu8023.github.io/post/first/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/first/</guid>
+      <description>第一篇博客  测试  </description>
+    </item>
+    
+  </channel>
+</rss>

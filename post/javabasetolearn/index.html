@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.65.2" />
+
+  <title>Java程序员面试，基础真的很重要 &middot; 浮世尘烟</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://gdzhu8023.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://gdzhu8023.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://gdzhu8023.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://gdzhu8023.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://gdzhu8023.github.io/">Menu</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/topics/"><i class='fa fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/tags/"><i class='fa fa-tags fa-fw'></i>Tags</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/MaTure_Zhu_GD" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://facebook.com/de.found.5" rel="me" target="_blank"><i class="fab fa-facebook-square fa-fw"></i>Facebook</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="http://weibo.com/2760705767" rel="me" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://instagram.com/inuslover" rel="me" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/gdzhu8023" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2017. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Java程序员面试，基础真的很重要</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Sep 2017, 23:58</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://gdzhu8023.github.io/topics/note">Note</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://gdzhu8023.github.io/topics/java">java</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://gdzhu8023.github.io/tags/2017-09">2017-09</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <h1 id="java程序员面试基础真的很重要">Java程序员面试，基础真的很重要</h1>
+<p>基础这东西，各个公司都很看重，尤其是大公司，他们看中人的潜力，他们舍得花精力去培养，所以基础是重中之重。<br>
+留作备用，慢慢复习填充。</p>
+<p>类型：转载<br>
+作者：六子<br>
+链接：https://zhuanlan.zhihu.com/p/29000810<br>
+来源：知乎<br>
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>基础无外乎几部分：语言（C/C++或java），操作系统，TCP/IP，数据结构与算法，再加上你所熟悉的领域。这里面其实有很多东西，各大面试宝典都有列举。</p>
+<h2 id="j2se基础">J2SE基础</h2>
+<ol>
+<li>九种基本数据类型的大小，以及他们的封装类。</li>
+<li>Switch能否用string做参数？</li>
+<li>equals与==的区别。</li>
+<li>Object有哪些公用方法？</li>
+<li>Java的四种引用，强弱软虚，用到的场景。</li>
+<li>Hashcode的作用。</li>
+<li>ArrayList、LinkedList、Vector的区别。</li>
+<li>String、StringBuffer与StringBuilder的区别。</li>
+<li>Map、Set、List、Queue、Stack的特点与用法。</li>
+<li>HashMap和HashTable的区别。</li>
+<li>HashMap和ConcurrentHashMap的区别，HashMap的底层源码。</li>
+<li>TreeMap、HashMap、LindedHashMap的区别。</li>
+<li>Collection包结构，与Collections的区别。</li>
+<li>try catch finally，try里有return，finally还执行么？</li>
+<li>Excption与Error包结构。OOM你遇到过哪些情况，SOF你遇到过哪些情况。</li>
+<li>Java面向对象的三个特征与含义。</li>
+<li>Override和Overload的含义去区别。</li>
+<li>Interface与abstract类的区别。</li>
+<li>Static class 与non static class的区别。</li>
+<li>java多态的实现原理。</li>
+<li>实现多线程的两种方法：Thread与Runable。</li>
+<li>线程同步的方法：sychronized、lock、reentrantLock等。</li>
+<li>锁的等级：方法锁、对象锁、类锁。</li>
+<li>写出生产者消费者模式。</li>
+<li>ThreadLocal的设计理念与作用。</li>
+<li>ThreadPool用法与优势。</li>
+<li>Concurrent包里的其他东西：ArrayBlockingQueue、CountDownLatch等等。</li>
+<li>wait()和sleep()的区别。</li>
+<li>foreach与正常for循环效率对比。</li>
+<li>Java IO与NIO。</li>
+<li>反射的作用于原理。</li>
+<li>泛型常用特点，List<!-- raw HTML omitted -->能否转为List<!-- raw HTML omitted -->。</li>
+<li>解析XML的几种方式的原理与特点：DOM、SAX、PULL。</li>
+<li>Java与C++对比。</li>
+<li>Java1.7与1.8新特性。</li>
+<li>设计模式：单例、工厂、适配器、责任链、观察者等等。</li>
+<li>JNI的使用。</li>
+</ol>
+<p>Java里有很多很杂的东西，有时候需要你阅读源码，大多数可能书里面讲的不是太清楚，需要你在网上寻找答案。<br>
+推荐书籍：《java核心技术卷I》《Thinking in java》《java并发编程》《effictive java》《大话设计模式》</p>
+<h2 id="jvm">JVM</h2>
+<ol>
+<li>内存模型以及分区，需要详细到每个区放什么。</li>
+<li>堆里面的分区：Eden，survival from to，老年代，各自的特点。</li>
+<li>对象创建方法，对象的内存分配，对象的访问定位。</li>
+<li>GC的两种判定方法：引用计数与引用链。</li>
+<li>GC的三种收集方法：标记清除、标记整理、复制算法的原理与特点，分别用在什么地方，如果让你优化收集方法，有什么思路？</li>
+<li>GC收集器有哪些？CMS收集器与G1收集器的特点。</li>
+<li>Minor GC与Full GC分别在什么时候发生？</li>
+<li>几种常用的内存调试工具：jmap、jstack、jconsole。</li>
+<li>类加载的五个过程：加载、验证、准备、解析、初始化。</li>
+<li>双亲委派模型：Bootstrap ClassLoader、Extension ClassLoader、ApplicationClassLoader。</li>
+<li>分派：静态分派与动态分派。</li>
+</ol>
+<p>JVM过去过来就问了这么些问题，没怎么变，内存模型和GC算法这块问得比较多   <br>
+推荐书籍：《深入理解java虚拟机》</p>
+<h2 id="操作系统">操作系统</h2>
+<ol>
+<li>进程和线程的区别。</li>
+<li>死锁的必要条件，怎么处理死锁。</li>
+<li>Window内存管理方式：段存储，页存储，段页存储。</li>
+<li>进程的几种状态。</li>
+<li>IPC几种通信方式。</li>
+<li>什么是虚拟内存。</li>
+<li>虚拟地址、逻辑地址、线性地址、物理地址的区别。</li>
+</ol>
+<p>推荐书籍：《深入理解现代操作系统》</p>
+<h2 id="tcpip">TCP/IP</h2>
+<ol>
+<li>OSI与TCP/IP各层的结构与功能，都有哪些协议。</li>
+<li>TCP与UDP的区别。</li>
+<li>TCP报文结构。</li>
+<li>TCP的三次握手与四次挥手过程，各个状态名称与含义，TIMEWAIT的作用。</li>
+<li>TCP拥塞控制。</li>
+<li>TCP滑动窗口与回退N针协议。</li>
+<li>Http的报文结构。</li>
+<li>Http的状态码含义。</li>
+<li>Http request的几种类型。</li>
+<li>Http1.1和Http1.0的区别</li>
+<li>Http怎么处理长连接。</li>
+<li>Cookie与Session的作用于原理。</li>
+<li>电脑上访问一个网页，整个过程是怎么样的：DNS、HTTP、TCP、OSPF、IP、ARP。</li>
+<li>Ping的整个过程。ICMP报文是什么。</li>
+<li>C/S模式下使用socket通信，几个关键函数。</li>
+<li>IP地址分类。</li>
+<li>路由器与交换机区别。</li>
+</ol>
+<p>网络其实大体分为两块，一个TCP协议，一个HTTP协议，只要把这两块以及相关协议搞清楚，一般问题不大。<br>
+推荐书籍：《TCP/IP协议族》</p>
+<h2 id="数据结构与算法">数据结构与算法</h2>
+<ol>
+<li>链表与数组。</li>
+<li>队列和栈，出栈与入栈。</li>
+<li>链表的删除、插入、反向。</li>
+<li>字符串操作。</li>
+<li>Hash表的hash函数，冲突解决方法有哪些。</li>
+<li>各种排序：冒泡、选择、插入、希尔、归并、快排、堆排、桶排、基数的原理、平均时间复杂度、最坏时间复杂度、空间复杂度、是否稳定。</li>
+<li>快排的partition函数与归并的Merge函数。</li>
+<li>对冒泡与快排的改进。</li>
+<li>二分查找，与变种二分查找。</li>
+<li>二叉树、B+树、AVL树、红黑树、哈夫曼树。</li>
+<li>二叉树的前中后续遍历：递归与非递归写法，层序遍历算法。</li>
+<li>图的BFS与DFS算法，最小生成树prim算法与最短路径Dijkstra算法。</li>
+<li>KMP算法。</li>
+<li>排列组合问题。</li>
+<li>动态规划、贪心算法、分治算法。（一般不会问到）</li>
+<li>大数据处理：类似10亿条数据找出最大的1000个数&hellip;&hellip;&hellip;等等 <br>
+推荐书籍：《大话数据结构》《剑指offer》《编程之美》 <br>
+其他综合性的书籍也需要阅读，推荐：《程序员面试笔试宝典》《程序员面试金典》。<br>
+除了基础外，你还应该对其他领域的知识有多少有所涉猎。对于你所熟悉的领域，你需要多了解一点新技术与科技前沿，你才能和面试官谈笑风生。</li>
+</ol>
+<h2 id="软实力">软实力</h2>
+<p>什么是软实力，就是你的人际交往、灵活应变能力，在面试过程中，良好的礼节、流畅的表达、积极的交流其实都是非常重要的。很多公司可能不光看你的技术水平怎么样，而更看重的是你这个人怎么样的。所以在面试过程中，请保持诚信、积极、乐观、幽默，这样更容易得到公司青睐。<br>
+很多时候我们都会遇到一个情况，就是面试官的问题我不会，这时候大多数情况下不要马上说我不会，要懂得牵引，例如面试官问我C++的多态原理，我不懂，但我知道java的，哪我可以向面试官解释说我知道java的，类似的这种可以往相关的地方迁移（但是需要注意的是一定不要不懂装懂，被拆穿了是很尴尬的），意思就是你要尽可能的展示自己，表现出你的主动性，向面试官推销自己。还有就是遇到智力题的时候，不要什么都不说，面试官其实不是在看你的答案，而是在看你的逻辑思维，你只要说出你自己的见解，有一定的思考过程就行。<br>
+不要担心找不到好工作，你要相信：<br>
+天道酬勤！</p>
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fjavabasetolearn%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fjavabasetolearn%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fjavabasetolearn%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fjavabasetolearn%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fjavabasetolearn%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fjavabasetolearn%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://gdzhu8023.github.io/post/javamapuse/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://gdzhu8023.github.io/post/javamapuse/">Java Map的几种遍历方式</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://gdzhu8023.github.io/post/lifestyle20171021/">生活随记</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://gdzhu8023.github.io/post/lifestyle20171021/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'gdzhu8023';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://gdzhu8023.github.io/js/ui.js"></script>
+<script src="https://gdzhu8023.github.io/js/menus.js"></script>
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-103593285-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+

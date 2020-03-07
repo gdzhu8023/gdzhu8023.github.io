@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.65.2" />
+
+  <title>在Github使用Hugo搭建个人博客 &middot; 浮世尘烟</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://gdzhu8023.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://gdzhu8023.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://gdzhu8023.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://gdzhu8023.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://gdzhu8023.github.io/">Menu</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/topics/"><i class='fa fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/tags/"><i class='fa fa-tags fa-fw'></i>Tags</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/MaTure_Zhu_GD" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://facebook.com/de.found.5" rel="me" target="_blank"><i class="fab fa-facebook-square fa-fw"></i>Facebook</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="http://weibo.com/2760705767" rel="me" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://instagram.com/inuslover" rel="me" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/gdzhu8023" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2017. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>在Github使用Hugo搭建个人博客</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Jul 2017, 21:33</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://gdzhu8023.github.io/topics/install-or-config">Install or Config</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://gdzhu8023.github.io/tags/2017-07">2017-07</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <h1 id="在github使用hugo搭建个人博客">在Github使用Hugo搭建个人博客</h1>
+<p>Hugo是一个用Go语言编写的静态网站生成器，它使用起来非常简单，相对于Jekyll复杂的安装设置来说，Hugo仅需要一个二进制文件hugo(hugo.exe)即可轻松用于本地调试和生成静态页面。
+
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1-1">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="https://gdzhu8023.github.io/post/img/buildBlog/hugo.png"
+        alt=" Img of Hugo website">
+    </div>
+  </div>
+  
+
+</div>
+</p>
+<h2 id="hugo">Hugo</h2>
+<ol>
+<li>Hugo只有一个二进制文件（比如Windows里只是一个hugo.exe）</li>
+<li>Hugo可以将你写好的MarkDown格式的文章自动转换为静态的网页。</li>
+<li>Hugo内置web服务器，可以方便的用于本地调试。</li>
+</ol>
+<h2 id="hello-hugo">Hello Hugo</h2>
+<p>Hugo官方主页：<a href="https://gohugo.io/">https://gohugo.io/</a><br>
+<img src="https://gdzhu8023.github.io/post/img/buildBlog/hugo.png" alt="Hugo官方主页"></p>
+<h2 id="基础安装">基础安装</h2>
+<ol>
+<li>Git (需要安装)</li>
+<li>Hugo windows客户端 配置
+<ul>
+<li>Hugo官网下载window客户端，下载后解压指任意目录</li>
+<li>下载地址 <a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></li>
+<li>windows环境变量 path 添加 <code>hugo.exe</code> 所在路径</li>
+<li>安装配置完命令行输入 <code>hugo --help </code> 会有输出</li>
+</ul>
+</li>
+<li>Github账号一枚，基本操作要会。</li>
+</ol>
+<h2 id="生成博客">生成博客</h2>
+<ol>
+<li>
+<p>新建一个文件夹用于保存hugo要生成的文件</p>
+</li>
+<li>
+<p>目录下右击 选择 <code>Git Bash Here</code> ,进入Git命令行工具，在命令行中输入</p>
+<pre><code>$ hugo new site mysite
+</code></pre></li>
+<li>
+<p>然后hugo会自动生成这样一个目录结构：</p>
+<pre><code>▸ archetypes/
+▸ content/
+▸ layouts/
+▸ static/
+config.toml
+</code></pre><p>config.toml目录是hugo博客的配置文件,所有的全局配置都要放在这个文件中。接下来创建内容,</p>
+<pre><code>$ cd mysite
+$ hugo new about.md
+</code></pre><p>执行完后在content目录下会出现about.md文件。打开about.md文件,在文件上面可以看到这么几行:</p>
+<pre><code>---
+title: &quot;About&quot;
+date: 2017-07-28T20:54:37+08:00
+draft: true
+---
+</code></pre><p>单篇博客的配置在+++内配置。<br>
+title就是博客的标题,<strong>draft=true</strong>表示这是一篇草稿,Hugo默认是不会渲染草稿状态的博客的,完成博客后使用</p>
+<pre><code>$ hugo undraft content/about.md
+</code></pre><p>命令可以改变博客的draft状态,或者手动到文件中修改。</p>
+<p>正文的内容写在+++区域的下面,使用markdown的语法。比如:</p>
+<pre><code>## 我是一个标题
+
+放一些内容
+</code></pre><p>一般为了便于管理,不会直接将posts放在content文件下,可以在content目录内新建一个post目录:</p>
+<pre><code>hugo new post/first.md
+</code></pre><p>可以看到在content/post/下产生了一个first.md文件。</p>
+</li>
+</ol>
+<h2 id="安装主题">安装主题</h2>
+<p>接下来安装主题,我们直接使用Hugo推荐的一些主题。比如说我使用的是blackburn这个主题:</p>
+<pre><code>git clone https://github.com/yoshiharuyamashita/blackburn.git themes/blackburn
+</code></pre><p>将主题git clone到themes/blackburn目录下,在config.toml中配置:</p>
+<pre><code>theme = &quot;blackburn&quot;
+</code></pre><p>这样主题就安装好了。</p>
+<h2 id="启动hugo">启动Hugo</h2>
+<p>终于到了看实际效果的时候了,在博客的项目根目录下运行:</p>
+<pre><code>hugo server --buildDrafts --theme=blackburn
+</code></pre><p>如果在配置文件中已经配置了theme的话就不需要再指定 <strong>- -theme</strong> 参数了, <strong>- -buildDrafts</strong> 参数的意思是渲染所有的post包括 <strong>draft=true</strong>状态的。</p>
+<p>打开浏览器,在地址栏中输入: http://localhost:1313, 就可以看到我们的博客了。</p>
+<h2 id="更改配置">更改配置</h2>
+<blockquote>
+<p>主题地址，可参考  <a href="https://themes.gohugo.io/blackburn/">https://themes.gohugo.io/blackburn/</a></p>
+</blockquote>
+<ul>
+<li>
+<p>一般来说使用默认的配置就可以了,但是要注意配置baseurl参数:</p>
+<pre><code>baseurl = &quot;http://这里是你的域名/&quot;
+</code></pre></li>
+<li>
+<p>当我们把博客部署到服务器上的时候注意要把配置中的baseurl改成自己的域名。</p>
+</li>
+</ul>
+<p>主题的配置参数也是在config.toml中配置,各个主题的配置不尽相同,需要参考主题的文档,这里给一个我使用的主题的配置:</p>
+<pre><code>baseURL = &quot;gdzhu8023.github.io&quot;
+languageCode = &quot;en-us&quot;
+title = &quot;浮世尘烟&quot;
+author = &quot;Zhu Guodong&quot;
+
+# Shown in the side menu
+copyright = &quot;&amp;copy; 2017. All rights reserved.&quot;
+canonifyurls = true
+paginate = 10
+theme = &quot;blackburn&quot;
+
+[indexes]
+  tag = &quot;tags&quot;
+  topic = &quot;topics&quot;
+
+[params]
+  # Shown in the home page
+  subtitle = &quot;Move on&quot;
+  brand = &quot;Menu&quot;
+  googleAnalytics = &quot;UA-103593285-1&quot;
+  # CSS name for highlight.js
+  highlightjs = &quot;monokai&quot;
+  dateFormat = &quot;02 Jan 2006, 15:04&quot;
+  #disqusShortname
+  disqus = &quot;gdzhu8023&quot;
+
+[menu]
+  # Shown in the side menu.
+  [[menu.main]]
+    name = &quot;Home&quot;
+    pre = &quot;&lt;i class='fa fa-home fa-fw'&gt;&lt;/i&gt;&quot;
+    weight = 1
+    identifier = &quot;home&quot;
+    url = &quot;/&quot;
+  [[menu.main]]
+    name = &quot;Posts&quot;
+    pre = &quot;&lt;i class='fa fa-list fa-fw'&gt;&lt;/i&gt;&quot;
+    weight = 2
+    identifier = &quot;post&quot;
+    url = &quot;/post/&quot;
+  [[menu.main]]
+    name = &quot;About&quot;
+    pre = &quot;&lt;i class='fa fa-user fa-fw'&gt;&lt;/i&gt;&quot;
+    weight = 3
+    identifier = &quot;about&quot;
+    url = &quot;/about/&quot;
+  [[menu.main]]
+    name = &quot;Contact&quot;
+    pre = &quot;&lt;i class='fa fa-phone fa-fw'&gt;&lt;/i&gt;&quot;
+    weight = 4
+    url = &quot;/contact/&quot;
+  [[menu.main]]
+    name = &quot;Topics&quot;
+    pre = &quot;&lt;i class='fa fa-folder fa-fw'&gt;&lt;/i&gt;&quot;
+    weight = 5
+    url = &quot;/topics/&quot;
+  [[menu.main]]
+    name = &quot;Tags&quot;
+    pre = &quot;&lt;i class='fa fa-tags fa-fw'&gt;&lt;/i&gt;&quot;
+    weight = 6
+    url = &quot;/tags/&quot;
+
+[social]
+  # Link your social networking accouns to the side menu
+  # by entering your username or ID.
+
+  # SNS microblogging
+  twitter = &quot;MaTure_Zhu_GD&quot;
+  facebook = &quot;de.found.5&quot;
+  #googleplus = &quot;/u/0/110451572416739183954&quot;
+  weibo = &quot;2760705767&quot;
+
+  # SNS career oriented
+
+  # SNS news
+  #reddit = &quot;*&quot;
+  #hackernews = &quot;*&quot;
+
+  # Techie
+  github = &quot;gdzhu8023&quot;
+
+</code></pre><h2 id="关于部署">关于部署</h2>
+<p>假设你需要部署在<code>GitHub Pages</code>上，首先在GitHub上创建一个Repository，命名为：<strong>gdzhu8023.github.io</strong> （gdzhu8023替换为你的github用户名）。<br>
+并且要在该Repository的setting里面，<strong>GitHub Pages</strong>部分设置一下</p>
+<p>在站点根目录执行 Hugo 命令生成最终页面：</p>
+<pre><code>$ hugo --theme=blackburn --buildDrafts --baseUrl=&quot;https://gdzhu8023.github.io/&quot;
+</code></pre><p>如果一切顺利，所有静态页面都会生成到 <strong>public</strong> 目录，将pubilc目录里所有文件 push 到刚创建的Repository的 master 分支。</p>
+<pre><code>$ cd public
+$ git init
+$ git remote add origin git@github.com:gdzhu8023/gdzhu8023.github.io.git
+$ git add -A
+$ git commit -m &quot;first commit&quot;
+$ git push -u origin master
+</code></pre><p>浏览器里访问：https://gdzhu8023.github.io/  就可以访问你的博客了</p>
+<h2 id="使用总结">使用总结</h2>
+<p>日常操作总结</p>
+<pre><code>--新建博客markdown文件，并编辑博客内容(文件名为 **.md )
+hugo new post/useGit.md
+--生成静态页面
+hugo --theme=blackburn --buildDrafts --baseUrl=&quot;https://gdzhu8023.github.io/&quot;
+---发布
+cd public 
+git add .
+git commit -m &quot;new blog added&quot;
+git push origin master
+</code></pre><h2 id="日常填坑">日常填坑</h2>
+<ol>
+<li>添加Topics 和 Tags</li>
+</ol>
+<ul>
+<li>首先config.toml中的menu部分要添加配置,weight按顺序填写</li>
+</ul>
+<pre><code>[[menu.main]]
+  name = &quot;Topics&quot;
+  pre = &quot;&lt;i class='fa fa-folder fa-fw'&gt;&lt;/i&gt;&quot;
+  weight = 5
+  url = &quot;/topics/&quot;
+[[menu.main]]
+  name = &quot;Tags&quot;
+  pre = &quot;&lt;i class='fa fa-tags fa-fw'&gt;&lt;/i&gt;&quot;
+  weight = 6
+  url = &quot;/tags/&quot;
+</code></pre><ul>
+<li>在博客的**.md文件中的头部添加你要的Topics 和 Tags（例如本篇博客的配置）</li>
+</ul>
+<pre><code>---
+title: &quot;在Github使用Hugo搭建个人博客&quot;
+date: 2017-07-29T21:33:13+08:00
+draft: true
+tags: [2017-07]
+topics: [Install or Config]
+---
+</code></pre><ul>
+<li>大功告成，标记和话题就出来了</li>
+</ul>
+<ol start="2">
+<li>home中预览文字和图片<br>
+这个问题困扰了我一天，给主题作者发了发了好几封邮件，终于解决了这个问题，非常感谢主题作者 <strong>Yoshiharu Yamashita</strong> 的帮助<br>
+话不多说，首先确保主题是GitHub上最新的(蜜汁尴尬，我是几天前clone的，少了一个html文件，导致渲染就是不成功，好吧，我的锅)，主要是要在  **.markdown （你的博客本地文件）中添加预览说明，如果添加图片需要加入标签，for example：
+<img src="https://gdzhu8023.github.io/post/img/buildBlog/config.jpg" alt="配置图片"></li>
+</ol>
+<ul>
+<li>FAQ
+<ul>
+<li>Q： 为什么不把此部分贴称文本？</li>
+<li>A： 因为贴进文本中就被hugo渲染了，导致home的图片和预览就失效了，具体为什么？我怎么知道，不要在意这些细节！几行代码而已啦！</li>
+</ul>
+</li>
+</ul>
+<h2 id="添加discus评论系统">添加Discus评论系统</h2>
+<ol>
+<li>注册Discus（需要科学上网）</li>
+</ol>
+<blockquote>
+<p><a href="https://disqus.com/">https://disqus.com/</a></p>
+</blockquote>
+<ol start="2">
+<li>首页点击 <strong>GET START</strong> ， 选择第二个 <strong>I want to install Disqus on my site</strong></li>
+<li>在<strong>Website Name</strong>中输入一个名称，点击创建</li>
+<li>Continue 正常配置</li>
+<li>配置页面有一个 <code>Shortname Your website shortname is gdzhu8023.</code></li>
+<li>将你的shotname配置到config.toml</li>
+</ol>
+<pre><code>disqus = &quot;gdzhu8023&quot;
+</code></pre><ol start="7">
+<li>大功告成，部署到GitHub上即可加载评论系统了</li>
+<li>友情提示：访问你博客的人需要科学上网才能加载评论，万恶的GFW</li>
+</ol>
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fbuildblog%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fbuildblog%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fbuildblog%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fbuildblog%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fbuildblog%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fbuildblog%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://gdzhu8023.github.io/post/usegit/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://gdzhu8023.github.io/post/usegit/">Git常用命令笔记</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://gdzhu8023.github.io/post/javaprogramfragment/">20个非常有用的Java程序片段</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://gdzhu8023.github.io/post/javaprogramfragment/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'gdzhu8023';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://gdzhu8023.github.io/js/ui.js"></script>
+<script src="https://gdzhu8023.github.io/js/menus.js"></script>
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-103593285-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+<script src="https://gdzhu8023.github.io/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
+</html>
+

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.65.2" />
+
+  <title>20个非常有用的Java程序片段 &middot; 浮世尘烟</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://gdzhu8023.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://gdzhu8023.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://gdzhu8023.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://gdzhu8023.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://gdzhu8023.github.io/">Menu</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/topics/"><i class='fa fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/tags/"><i class='fa fa-tags fa-fw'></i>Tags</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/MaTure_Zhu_GD" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://facebook.com/de.found.5" rel="me" target="_blank"><i class="fab fa-facebook-square fa-fw"></i>Facebook</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="http://weibo.com/2760705767" rel="me" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://instagram.com/inuslover" rel="me" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/gdzhu8023" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2017. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>20个非常有用的Java程序片段</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>31 Jul 2017, 22:18</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://gdzhu8023.github.io/topics/note">Note</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://gdzhu8023.github.io/topics/java">java</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://gdzhu8023.github.io/tags/2017-07">2017-07</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <p>下面是20个非常有用的Java程序片段，希望能对你有用。</p>
+
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1-1">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="https://gdzhu8023.github.io/post/img/javaprogramfragment/java.jpg"
+        alt=" Img of java">
+    </div>
+  </div>
+  
+
+</div>
+
+<h2 id="1-字符串有整型的相互转换">1. 字符串有整型的相互转换</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String a <span style="color:#f92672">=</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>2<span style="color:#f92672">);</span>   <span style="color:#75715e">//integer to numeric string  
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">parseInt</span><span style="color:#f92672">(</span>a<span style="color:#f92672">);</span> <span style="color:#75715e">//numeric string to an int
+</span></code></pre></div><h2 id="2-向文件末尾添加内容">2. 向文件末尾添加内容</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">BufferedWriter out <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>  
+<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>  
+    out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedWriter<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FileWriter<span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">”</span>filename<span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">));</span>  
+    out<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">”</span>aString<span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">);</span>  
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+    <span style="color:#75715e">// error processing code  
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span> <span style="color:#66d9ef">finally</span> <span style="color:#f92672">{</span>  
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>out <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+        out<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>  
+    <span style="color:#f92672">}</span>  
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="3-得到当前方法的名字">3. 得到当前方法的名字</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String methodName <span style="color:#f92672">=</span> Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">currentThread</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getStackTrace</span><span style="color:#f92672">()[</span>1<span style="color:#f92672">].</span><span style="color:#a6e22e">getMethodName</span><span style="color:#f92672">();</span>
+</code></pre></div><h2 id="4-转字符串到日期">4. 转字符串到日期</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">java<span style="color:#f92672">.</span><span style="color:#a6e22e">util</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Date</span> <span style="color:#f92672">=</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">text</span><span style="color:#f92672">.</span><span style="color:#a6e22e">DateFormat</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getDateInstance</span><span style="color:#f92672">().</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>date String<span style="color:#f92672">);</span>
+</code></pre></div><p>或者是：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">SimpleDateFormat format <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span> <span style="color:#e6db74">&#34;dd.MM.yyyy&#34;</span> <span style="color:#f92672">);</span>  
+Date date <span style="color:#f92672">=</span> format<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span> myString <span style="color:#f92672">);</span>
+</code></pre></div><h2 id="5-使用jdbc链接oracle">5. 使用JDBC链接Oracle</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OracleJdbcTest</span>  
+<span style="color:#f92672">{</span>  
+    String driverClass <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;oracle.jdbc.driver.OracleDriver&#34;</span><span style="color:#f92672">;</span>  
+
+    Connection con<span style="color:#f92672">;</span>  
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span><span style="color:#f92672">(</span>FileInputStream fs<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ClassNotFoundException<span style="color:#f92672">,</span> SQLException<span style="color:#f92672">,</span> FileNotFoundException<span style="color:#f92672">,</span> IOException  
+    <span style="color:#f92672">{</span>  
+        Properties props <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Properties<span style="color:#f92672">();</span>  
+        props<span style="color:#f92672">.</span><span style="color:#a6e22e">load</span><span style="color:#f92672">(</span>fs<span style="color:#f92672">);</span>  
+        String url <span style="color:#f92672">=</span> props<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;db.url&#34;</span><span style="color:#f92672">);</span>  
+        String userName <span style="color:#f92672">=</span> props<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;db.user&#34;</span><span style="color:#f92672">);</span>  
+        String password <span style="color:#f92672">=</span> props<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;db.password&#34;</span><span style="color:#f92672">);</span>  
+        Class<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span>driverClass<span style="color:#f92672">);</span>  
+
+        con<span style="color:#f92672">=</span>DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>url<span style="color:#f92672">,</span> userName<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>  
+    <span style="color:#f92672">}</span>  
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fetch</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> SQLException<span style="color:#f92672">,</span> IOException  
+    <span style="color:#f92672">{</span>  
+        PreparedStatement ps <span style="color:#f92672">=</span> con<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;select SYSDATE from dual&#34;</span><span style="color:#f92672">);</span>  
+        ResultSet rs <span style="color:#f92672">=</span> ps<span style="color:#f92672">.</span><span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">();</span>  
+
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>rs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">())</span>  
+        <span style="color:#f92672">{</span>  
+            <span style="color:#75715e">// do the thing you do  
+</span><span style="color:#75715e"></span>        <span style="color:#f92672">}</span>  
+        rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>  
+        ps<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>  
+    <span style="color:#f92672">}</span>  
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>  
+    <span style="color:#f92672">{</span>  
+        OracleJdbcTest test <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> OracleJdbcTest<span style="color:#f92672">();</span>  
+        test<span style="color:#f92672">.</span><span style="color:#a6e22e">init</span><span style="color:#f92672">();</span>  
+        test<span style="color:#f92672">.</span><span style="color:#a6e22e">fetch</span><span style="color:#f92672">();</span>  
+    <span style="color:#f92672">}</span>  
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="6-把-java-utildate-转成-sqldate">6. 把 Java util.Date 转成 sql.Date</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">java<span style="color:#f92672">.</span><span style="color:#a6e22e">util</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Date</span> utilDate <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">util</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Date</span><span style="color:#f92672">();</span>  
+java<span style="color:#f92672">.</span><span style="color:#a6e22e">sql</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Date</span> sqlDate <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">sql</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Date</span><span style="color:#f92672">(</span>utilDate<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">());</span>
+</code></pre></div><h2 id="7-使用nio进行快速的文件拷贝">7. 使用NIO进行快速的文件拷贝</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">fileCopy</span><span style="color:#f92672">(</span> File in<span style="color:#f92672">,</span> File out <span style="color:#f92672">)</span>  
+            <span style="color:#66d9ef">throws</span> IOException  
+    <span style="color:#f92672">{</span>  
+        FileChannel inChannel <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span> in <span style="color:#f92672">).</span><span style="color:#a6e22e">getChannel</span><span style="color:#f92672">();</span>  
+        FileChannel outChannel <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span> out <span style="color:#f92672">).</span><span style="color:#a6e22e">getChannel</span><span style="color:#f92672">();</span>  
+        <span style="color:#66d9ef">try</span> 
+        <span style="color:#f92672">{</span>  
+            <span style="color:#75715e">//inChannel.transferTo(0, inChannel.size(), outChannel);      // original -- apparently has trouble copying large files on Windows  
+</span><span style="color:#75715e"></span>
+            <span style="color:#75715e">// magic number for Windows, 64Mb - 32Kb)  
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">int</span> maxCount <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>64 <span style="color:#f92672">*</span> 1024 <span style="color:#f92672">*</span> 1024<span style="color:#f92672">)</span> <span style="color:#f92672">-</span> <span style="color:#f92672">(</span>32 <span style="color:#f92672">*</span> 1024<span style="color:#f92672">);</span>  
+            <span style="color:#66d9ef">long</span> size <span style="color:#f92672">=</span> inChannel<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span>  
+            <span style="color:#66d9ef">long</span> position <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>  
+            <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span> position <span style="color:#f92672">&lt;</span> size <span style="color:#f92672">){</span>  
+               position <span style="color:#f92672">+=</span> inChannel<span style="color:#f92672">.</span><span style="color:#a6e22e">transferTo</span><span style="color:#f92672">(</span> position<span style="color:#f92672">,</span> maxCount<span style="color:#f92672">,</span> outChannel <span style="color:#f92672">);</span>  
+            <span style="color:#f92672">}</span>  
+        <span style="color:#f92672">}</span>  
+        <span style="color:#66d9ef">finally</span><span style="color:#f92672">{</span>  
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> inChannel <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">){</span>  
+               inChannel<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>  
+            <span style="color:#f92672">}</span>  
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> outChannel <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">){</span>  
+                outChannel<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>  
+            <span style="color:#f92672">}</span>  
+        <span style="color:#f92672">}</span>  
+    <span style="color:#f92672">}</span>
+</code></pre></div><h2 id="8-创建图片的缩略图">8. 创建图片的缩略图</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">createThumbnail</span><span style="color:#f92672">(</span>String filename<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> thumbWidth<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> thumbHeight<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> quality<span style="color:#f92672">,</span> String outFilename<span style="color:#f92672">)</span>  
+        <span style="color:#66d9ef">throws</span> InterruptedException<span style="color:#f92672">,</span> FileNotFoundException<span style="color:#f92672">,</span> IOException  
+    <span style="color:#f92672">{</span>  
+        <span style="color:#75715e">// load image from filename  
+</span><span style="color:#75715e"></span>        Image image <span style="color:#f92672">=</span> Toolkit<span style="color:#f92672">.</span><span style="color:#a6e22e">getDefaultToolkit</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getImage</span><span style="color:#f92672">(</span>filename<span style="color:#f92672">);</span>  
+        MediaTracker mediaTracker <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MediaTracker<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Container<span style="color:#f92672">());</span>  
+        mediaTracker<span style="color:#f92672">.</span><span style="color:#a6e22e">addImage</span><span style="color:#f92672">(</span>image<span style="color:#f92672">,</span> 0<span style="color:#f92672">);</span>  
+        mediaTracker<span style="color:#f92672">.</span><span style="color:#a6e22e">waitForID</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>  
+        <span style="color:#75715e">// use this to test for errors at this point: System.out.println(mediaTracker.isErrorAny());  
+</span><span style="color:#75715e"></span>
+        <span style="color:#75715e">// determine thumbnail size from WIDTH and HEIGHT  
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">double</span> thumbRatio <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">double</span><span style="color:#f92672">)</span>thumbWidth <span style="color:#f92672">/</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">double</span><span style="color:#f92672">)</span>thumbHeight<span style="color:#f92672">;</span>  
+        <span style="color:#66d9ef">int</span> imageWidth <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span><span style="color:#a6e22e">getWidth</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>  
+        <span style="color:#66d9ef">int</span> imageHeight <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span><span style="color:#a6e22e">getHeight</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>  
+        <span style="color:#66d9ef">double</span> imageRatio <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">double</span><span style="color:#f92672">)</span>imageWidth <span style="color:#f92672">/</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">double</span><span style="color:#f92672">)</span>imageHeight<span style="color:#f92672">;</span>  
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>thumbRatio <span style="color:#f92672">&lt;</span> imageRatio<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+            thumbHeight <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)(</span>thumbWidth <span style="color:#f92672">/</span> imageRatio<span style="color:#f92672">);</span>  
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>  
+            thumbWidth <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)(</span>thumbHeight <span style="color:#f92672">*</span> imageRatio<span style="color:#f92672">);</span>  
+        <span style="color:#f92672">}</span>  
+
+        <span style="color:#75715e">// draw original image to thumbnail image object and  
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// scale it to the new size on-the-fly  
+</span><span style="color:#75715e"></span>        BufferedImage thumbImage <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedImage<span style="color:#f92672">(</span>thumbWidth<span style="color:#f92672">,</span> thumbHeight<span style="color:#f92672">,</span> BufferedImage<span style="color:#f92672">.</span><span style="color:#a6e22e">TYPE_INT_RGB</span><span style="color:#f92672">);</span>  
+        Graphics2D graphics2D <span style="color:#f92672">=</span> thumbImage<span style="color:#f92672">.</span><span style="color:#a6e22e">createGraphics</span><span style="color:#f92672">();</span>  
+        graphics2D<span style="color:#f92672">.</span><span style="color:#a6e22e">setRenderingHint</span><span style="color:#f92672">(</span>RenderingHints<span style="color:#f92672">.</span><span style="color:#a6e22e">KEY_INTERPOLATION</span><span style="color:#f92672">,</span> RenderingHints<span style="color:#f92672">.</span><span style="color:#a6e22e">VALUE_INTERPOLATION_BILINEAR</span><span style="color:#f92672">);</span>  
+        graphics2D<span style="color:#f92672">.</span><span style="color:#a6e22e">drawImage</span><span style="color:#f92672">(</span>image<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> thumbWidth<span style="color:#f92672">,</span> thumbHeight<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>  
+
+        <span style="color:#75715e">// save thumbnail image to outFilename  
+</span><span style="color:#75715e"></span>        BufferedOutputStream out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedOutputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span>outFilename<span style="color:#f92672">));</span>  
+        JPEGImageEncoder encoder <span style="color:#f92672">=</span> JPEGCodec<span style="color:#f92672">.</span><span style="color:#a6e22e">createJPEGEncoder</span><span style="color:#f92672">(</span>out<span style="color:#f92672">);</span>  
+        JPEGEncodeParam param <span style="color:#f92672">=</span> encoder<span style="color:#f92672">.</span><span style="color:#a6e22e">getDefaultJPEGEncodeParam</span><span style="color:#f92672">(</span>thumbImage<span style="color:#f92672">);</span>  
+        quality <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>quality<span style="color:#f92672">,</span> 100<span style="color:#f92672">));</span>  
+        param<span style="color:#f92672">.</span><span style="color:#a6e22e">setQuality</span><span style="color:#f92672">((</span><span style="color:#66d9ef">float</span><span style="color:#f92672">)</span>quality <span style="color:#f92672">/</span> 100<span style="color:#f92672">.</span><span style="color:#a6e22e">0f</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>  
+        encoder<span style="color:#f92672">.</span><span style="color:#a6e22e">setJPEGEncodeParam</span><span style="color:#f92672">(</span>param<span style="color:#f92672">);</span>  
+        encoder<span style="color:#f92672">.</span><span style="color:#a6e22e">encode</span><span style="color:#f92672">(</span>thumbImage<span style="color:#f92672">);</span>  
+        out<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>  
+    <span style="color:#f92672">}</span>
+
+</code></pre></div><h2 id="9-创建-json-格式的数据">9. 创建 JSON 格式的数据</h2>
+<p>并下面这个JAR 文件：json-rpc-1.0.jar (75 kb)
+<a href="http://link.zhihu.com/?target=http%3A//viralpatel.net/blogs/download/json/json-rpc-1.0.jar">http://link.zhihu.com/?target=http%3A//viralpatel.net/blogs/download/json/json-rpc-1.0.jar</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.json.JSONObject<span style="color:#f92672">;</span>  
+<span style="color:#f92672">...</span>  
+<span style="color:#f92672">...</span>  
+JSONObject json <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JSONObject<span style="color:#f92672">();</span>  
+json<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Mumbai&#34;</span><span style="color:#f92672">);</span>  
+json<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;country&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;India&#34;</span><span style="color:#f92672">);</span>  
+<span style="color:#f92672">...</span>  
+String output <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>  
+<span style="color:#f92672">...</span>
+</code></pre></div><h2 id="10-使用itext-jar生成pdf">10. 使用iText JAR生成PDF</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.io.File<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> java.io.FileOutputStream<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> java.io.OutputStream<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> java.util.Date<span style="color:#f92672">;</span>  
+
+<span style="color:#f92672">import</span> com.lowagie.text.Document<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> com.lowagie.text.Paragraph<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> com.lowagie.text.pdf.PdfWriter<span style="color:#f92672">;</span>  
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GeneratePDF</span> <span style="color:#f92672">{</span>  
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+    <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>  
+            OutputStream file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;C:\\Test.pdf&#34;</span><span style="color:#f92672">));</span>  
+
+            Document document <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Document<span style="color:#f92672">();</span>  
+            PdfWriter<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span>document<span style="color:#f92672">,</span> file<span style="color:#f92672">);</span>  
+            document<span style="color:#f92672">.</span><span style="color:#a6e22e">open</span><span style="color:#f92672">();</span>  
+            document<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Paragraph<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello Kiran&#34;</span><span style="color:#f92672">));</span>  
+            document<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Paragraph<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Date<span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">()));</span>  
+
+            document<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>  
+            file<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>  
+
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+
+            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>  
+        <span style="color:#f92672">}</span>  
+    <span style="color:#f92672">}</span>  
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="11-http-代理设置">11. HTTP 代理设置</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">System<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperties</span><span style="color:#f92672">().</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http.proxyHost&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;someProxyURL&#34;</span><span style="color:#f92672">);</span>  
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperties</span><span style="color:#f92672">().</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http.proxyPort&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;someProxyPort&#34;</span><span style="color:#f92672">);</span>  
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperties</span><span style="color:#f92672">().</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http.proxyUser&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;someUserName&#34;</span><span style="color:#f92672">);</span>  
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperties</span><span style="color:#f92672">().</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http.proxyPassword&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;somePassword&#34;</span><span style="color:#f92672">);</span>
+</code></pre></div><h2 id="12-单实例singleton-示例">12. 单实例Singleton 示例</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SimpleSingleton</span> <span style="color:#f92672">{</span>  
+<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> SimpleSingleton singleInstance <span style="color:#f92672">=</span>  <span style="color:#66d9ef">new</span> SimpleSingleton<span style="color:#f92672">();</span>  
+
+    <span style="color:#75715e">//Marking default constructor private  
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//to avoid direct instantiation.  
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">SimpleSingleton</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>  
+    <span style="color:#f92672">}</span>  
+
+    <span style="color:#75715e">//Get instance for class SimpleSingleton  
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> SimpleSingleton <span style="color:#a6e22e">getInstance</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>  
+
+        <span style="color:#66d9ef">return</span> singleInstance<span style="color:#f92672">;</span>  
+    <span style="color:#f92672">}</span>  
+<span style="color:#f92672">}</span>
+</code></pre></div><p>另一种实现</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> SimpleSingleton <span style="color:#f92672">{</span>  
+    INSTANCE<span style="color:#f92672">;</span>  
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doSomething</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>  
+    <span style="color:#f92672">}</span>  
+<span style="color:#f92672">}</span>  
+
+    <span style="color:#75715e">//Call the method from Singleton:  
+</span><span style="color:#75715e"></span>    SimpleSingleton<span style="color:#f92672">.</span><span style="color:#a6e22e">INSTANCE</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doSomething</span><span style="color:#f92672">();</span>   
+</code></pre></div><h2 id="13-抓屏程序">13. 抓屏程序</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.awt.Dimension<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> java.awt.Rectangle<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> java.awt.Robot<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> java.awt.Toolkit<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> java.awt.image.BufferedImage<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> javax.imageio.ImageIO<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> java.io.File<span style="color:#f92672">;</span>  
+
+<span style="color:#f92672">...</span>  
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">captureScreen</span><span style="color:#f92672">(</span>String fileName<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>  
+
+Dimension screenSize <span style="color:#f92672">=</span> Toolkit<span style="color:#f92672">.</span><span style="color:#a6e22e">getDefaultToolkit</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getScreenSize</span><span style="color:#f92672">();</span>  
+Rectangle screenRectangle <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Rectangle<span style="color:#f92672">(</span>screenSize<span style="color:#f92672">);</span>  
+Robot robot <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Robot<span style="color:#f92672">();</span>  
+BufferedImage image <span style="color:#f92672">=</span> robot<span style="color:#f92672">.</span><span style="color:#a6e22e">createScreenCapture</span><span style="color:#f92672">(</span>screenRectangle<span style="color:#f92672">);</span>  
+ImageIO<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>image<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;png&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span>fileName<span style="color:#f92672">));</span>  
+
+<span style="color:#f92672">}</span>  
+<span style="color:#f92672">...</span>
+</code></pre></div><h2 id="14-列出文件和目录">14. 列出文件和目录</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">File dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;directoryName&#34;</span><span style="color:#f92672">);</span>  
+    String<span style="color:#f92672">[]</span> children <span style="color:#f92672">=</span> dir<span style="color:#f92672">.</span><span style="color:#a6e22e">list</span><span style="color:#f92672">();</span>  
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>children <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+      <span style="color:#75715e">// Either dir does not exist or is not a directory  
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>  
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> children<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>  
+          <span style="color:#75715e">// Get filename of file or directory  
+</span><span style="color:#75715e"></span>          String filename <span style="color:#f92672">=</span> children<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>  
+    <span style="color:#f92672">}</span>  
+<span style="color:#f92672">}</span>  
+
+<span style="color:#75715e">// It is also possible to filter the list of returned files.  
+</span><span style="color:#75715e">// This example does not return any files that start with `.&#39;.  
+</span><span style="color:#75715e"></span>FilenameFilter filter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FilenameFilter<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>  
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span>File dir<span style="color:#f92672">,</span> String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">!</span>name<span style="color:#f92672">.</span><span style="color:#a6e22e">startsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">);</span>  
+    <span style="color:#f92672">}</span>  
+<span style="color:#f92672">};</span>  
+children <span style="color:#f92672">=</span> dir<span style="color:#f92672">.</span><span style="color:#a6e22e">list</span><span style="color:#f92672">(</span>filter<span style="color:#f92672">);</span>  
+
+<span style="color:#75715e">// The list of files can also be retrieved as File objects  
+</span><span style="color:#75715e"></span>File<span style="color:#f92672">[]</span> files <span style="color:#f92672">=</span> dir<span style="color:#f92672">.</span><span style="color:#a6e22e">listFiles</span><span style="color:#f92672">();</span>  
+
+<span style="color:#75715e">// This filter only returns directories  
+</span><span style="color:#75715e"></span>FileFilter fileFilter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileFilter<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>  
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">accept</span><span style="color:#f92672">(</span>File file<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+        <span style="color:#66d9ef">return</span> file<span style="color:#f92672">.</span><span style="color:#a6e22e">isDirectory</span><span style="color:#f92672">();</span>  
+    <span style="color:#f92672">}</span>  
+<span style="color:#f92672">};</span>  
+files <span style="color:#f92672">=</span> dir<span style="color:#f92672">.</span><span style="color:#a6e22e">listFiles</span><span style="color:#f92672">(</span>fileFilter<span style="color:#f92672">);</span>
+</code></pre></div><h2 id="15-创建zip和jar文件">15. 创建ZIP和JAR文件</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.zip.*<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> java.io.*<span style="color:#f92672">;</span>  
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ZipIt</span> <span style="color:#f92672">{</span>  
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[])</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>  
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>args<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">&lt;</span> 2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;usage: java ZipIt Zip.zip file1 file2 file3&#34;</span><span style="color:#f92672">);</span>  
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">exit</span><span style="color:#f92672">(-</span>1<span style="color:#f92672">);</span>  
+    <span style="color:#f92672">}</span>  
+    File zipFile <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span>args<span style="color:#f92672">[</span>0<span style="color:#f92672">]);</span>  
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>zipFile<span style="color:#f92672">.</span><span style="color:#a6e22e">exists</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>  
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Zip file already exists, please try another&#34;</span><span style="color:#f92672">);</span>  
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">exit</span><span style="color:#f92672">(-</span>2<span style="color:#f92672">);</span>  
+    <span style="color:#f92672">}</span>  
+    FileOutputStream fos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span>zipFile<span style="color:#f92672">);</span>  
+    ZipOutputStream zos <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ZipOutputStream<span style="color:#f92672">(</span>fos<span style="color:#f92672">);</span>  
+    <span style="color:#66d9ef">int</span> bytesRead<span style="color:#f92672">;</span>  
+    <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> buffer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>1024<span style="color:#f92672">];</span>  
+    CRC32 crc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CRC32<span style="color:#f92672">();</span>  
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>1<span style="color:#f92672">,</span> n<span style="color:#f92672">=</span>args<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>  
+        String name <span style="color:#f92672">=</span> args<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>  
+        File file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>  
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>file<span style="color:#f92672">.</span><span style="color:#a6e22e">exists</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>  
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Skipping: &#34;</span> <span style="color:#f92672">+</span> name<span style="color:#f92672">);</span>  
+            <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>  
+        <span style="color:#f92672">}</span>  
+        BufferedInputStream bis <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedInputStream<span style="color:#f92672">(</span>  
+        <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span>file<span style="color:#f92672">));</span>  
+        crc<span style="color:#f92672">.</span><span style="color:#a6e22e">reset</span><span style="color:#f92672">();</span>  
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">((</span>bytesRead <span style="color:#f92672">=</span> bis<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>buffer<span style="color:#f92672">))</span> <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+            crc<span style="color:#f92672">.</span><span style="color:#a6e22e">update</span><span style="color:#f92672">(</span>buffer<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> bytesRead<span style="color:#f92672">);</span>  
+        <span style="color:#f92672">}</span>  
+        bis<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>  
+        <span style="color:#75715e">// Reset to beginning of input stream  
+</span><span style="color:#75715e"></span>        bis <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedInputStream<span style="color:#f92672">(</span>  
+        <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span>file<span style="color:#f92672">));</span>  
+        ZipEntry entry <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ZipEntry<span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>  
+        entry<span style="color:#f92672">.</span><span style="color:#a6e22e">setMethod</span><span style="color:#f92672">(</span>ZipEntry<span style="color:#f92672">.</span><span style="color:#a6e22e">STORED</span><span style="color:#f92672">);</span>  
+        entry<span style="color:#f92672">.</span><span style="color:#a6e22e">setCompressedSize</span><span style="color:#f92672">(</span>file<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">());</span>  
+        entry<span style="color:#f92672">.</span><span style="color:#a6e22e">setSize</span><span style="color:#f92672">(</span>file<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">());</span>  
+        entry<span style="color:#f92672">.</span><span style="color:#a6e22e">setCrc</span><span style="color:#f92672">(</span>crc<span style="color:#f92672">.</span><span style="color:#a6e22e">getValue</span><span style="color:#f92672">());</span>  
+        zos<span style="color:#f92672">.</span><span style="color:#a6e22e">putNextEntry</span><span style="color:#f92672">(</span>entry<span style="color:#f92672">);</span>  
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">((</span>bytesRead <span style="color:#f92672">=</span> bis<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>buffer<span style="color:#f92672">))</span> <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+            zos<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>buffer<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> bytesRead<span style="color:#f92672">);</span>  
+        <span style="color:#f92672">}</span>  
+        bis<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>  
+    <span style="color:#f92672">}</span>  
+    zos<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>  
+<span style="color:#f92672">}</span>  
+</code></pre></div><h2 id="16-解析读取xml-文件">16. 解析/读取XML 文件</h2>
+<p>XML文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34;?&gt;</span> 
+<span style="color:#f92672">&lt;students&gt;</span> 
+    <span style="color:#f92672">&lt;student&gt;</span> 
+        <span style="color:#f92672">&lt;name&gt;</span>John<span style="color:#f92672">&lt;/name&gt;</span> 
+        <span style="color:#f92672">&lt;grade&gt;</span>B<span style="color:#f92672">&lt;/grade&gt;</span> 
+        <span style="color:#f92672">&lt;age&gt;</span>12<span style="color:#f92672">&lt;/age&gt;</span> 
+    <span style="color:#f92672">&lt;/student&gt;</span> 
+    <span style="color:#f92672">&lt;student&gt;</span> 
+        <span style="color:#f92672">&lt;name&gt;</span>Mary<span style="color:#f92672">&lt;/name&gt;</span> 
+        <span style="color:#f92672">&lt;grade&gt;</span>A<span style="color:#f92672">&lt;/grade&gt;</span> 
+        <span style="color:#f92672">&lt;age&gt;</span>11<span style="color:#f92672">&lt;/age&gt;</span> 
+    <span style="color:#f92672">&lt;/student&gt;</span> 
+    <span style="color:#f92672">&lt;student&gt;</span> 
+        <span style="color:#f92672">&lt;name&gt;</span>Simon<span style="color:#f92672">&lt;/name&gt;</span> 
+        <span style="color:#f92672">&lt;grade&gt;</span>A<span style="color:#f92672">&lt;/grade&gt;</span> 
+        <span style="color:#f92672">&lt;age&gt;</span>18<span style="color:#f92672">&lt;/age&gt;</span> 
+    <span style="color:#f92672">&lt;/student&gt;</span> 
+<span style="color:#f92672">&lt;/students&gt;</span>
+</code></pre></div><p>java文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> net.viralpatel.java.xmlparser<span style="color:#f92672">;</span>  
+
+<span style="color:#f92672">import</span> java.io.File<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> javax.xml.parsers.DocumentBuilder<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> javax.xml.parsers.DocumentBuilderFactory<span style="color:#f92672">;</span>  
+
+<span style="color:#f92672">import</span> org.w3c.dom.Document<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> org.w3c.dom.Element<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> org.w3c.dom.Node<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> org.w3c.dom.NodeList<span style="color:#f92672">;</span>  
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">XMLParser</span> <span style="color:#f92672">{</span>  
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">getAllUserNames</span><span style="color:#f92672">(</span>String fileName<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>  
+            DocumentBuilderFactory dbf <span style="color:#f92672">=</span> DocumentBuilderFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">newInstance</span><span style="color:#f92672">();</span>  
+            DocumentBuilder db <span style="color:#f92672">=</span> dbf<span style="color:#f92672">.</span><span style="color:#a6e22e">newDocumentBuilder</span><span style="color:#f92672">();</span>  
+            File file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span>fileName<span style="color:#f92672">);</span>  
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>file<span style="color:#f92672">.</span><span style="color:#a6e22e">exists</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>  
+                Document doc <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>file<span style="color:#f92672">);</span>  
+                Element docEle <span style="color:#f92672">=</span> doc<span style="color:#f92672">.</span><span style="color:#a6e22e">getDocumentElement</span><span style="color:#f92672">();</span>  
+
+                <span style="color:#75715e">// Print root element of the document  
+</span><span style="color:#75715e"></span>                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Root element of the document: &#34;</span>  <span style="color:#f92672">+</span> docEle<span style="color:#f92672">.</span><span style="color:#a6e22e">getNodeName</span><span style="color:#f92672">());</span>  
+
+                NodeList studentList <span style="color:#f92672">=</span> docEle<span style="color:#f92672">.</span><span style="color:#a6e22e">getElementsByTagName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;student&#34;</span><span style="color:#f92672">);</span>  
+
+                <span style="color:#75715e">// Print total student elements in document  
+</span><span style="color:#75715e"></span>                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Total students: &#34;</span> <span style="color:#f92672">+</span> studentList<span style="color:#f92672">.</span><span style="color:#a6e22e">getLength</span><span style="color:#f92672">());</span>  
+
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>studentList <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> studentList<span style="color:#f92672">.</span><span style="color:#a6e22e">getLength</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+                    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> studentList<span style="color:#f92672">.</span><span style="color:#a6e22e">getLength</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>  
+
+                        Node node <span style="color:#f92672">=</span> studentList<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>  
+
+                        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">getNodeType</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> Node<span style="color:#f92672">.</span><span style="color:#a6e22e">ELEMENT_NODE</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+
+                            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;=====================&#34;</span><span style="color:#f92672">);</span>  
+
+                            Element e <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Element<span style="color:#f92672">)</span> node<span style="color:#f92672">;</span>  
+                            NodeList nodeList <span style="color:#f92672">=</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">getElementsByTagName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">);</span>  
+                            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Name: &#34;</span> <span style="color:#f92672">+</span> nodeList<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span><span style="color:#f92672">(</span>0<span style="color:#f92672">).</span><span style="color:#a6e22e">getChildNodes</span><span style="color:#f92672">().</span><span style="color:#a6e22e">item</span><span style="color:#f92672">(</span>0<span style="color:#f92672">).</span><span style="color:#a6e22e">getNodeValue</span><span style="color:#f92672">());</span>  
+
+                            nodeList <span style="color:#f92672">=</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">getElementsByTagName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;grade&#34;</span><span style="color:#f92672">);</span>  
+                            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Grade: &#34;</span> <span style="color:#f92672">+</span> nodeList<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span><span style="color:#f92672">(</span>0<span style="color:#f92672">).</span><span style="color:#a6e22e">getChildNodes</span><span style="color:#f92672">().</span><span style="color:#a6e22e">item</span><span style="color:#f92672">(</span>0<span style="color:#f92672">).</span><span style="color:#a6e22e">getNodeValue</span><span style="color:#f92672">());</span>  
+
+                            nodeList <span style="color:#f92672">=</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">getElementsByTagName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;age&#34;</span><span style="color:#f92672">);</span>  
+                            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Age: &#34;</span> <span style="color:#f92672">+</span> nodeList<span style="color:#f92672">.</span><span style="color:#a6e22e">item</span><span style="color:#f92672">(</span>0<span style="color:#f92672">).</span><span style="color:#a6e22e">getChildNodes</span><span style="color:#f92672">().</span><span style="color:#a6e22e">item</span><span style="color:#f92672">(</span>0<span style="color:#f92672">).</span><span style="color:#a6e22e">getNodeValue</span><span style="color:#f92672">());</span>  
+                        <span style="color:#f92672">}</span>  
+                    <span style="color:#f92672">}</span>  
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>  
+                    System<span style="color:#f92672">.</span><span style="color:#a6e22e">exit</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>  
+                <span style="color:#f92672">}</span>  
+            <span style="color:#f92672">}</span>  
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>e<span style="color:#f92672">);</span>  
+        <span style="color:#f92672">}</span>  
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+
+        XMLParser parser <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> XMLParser<span style="color:#f92672">();</span>  
+        parser<span style="color:#f92672">.</span><span style="color:#a6e22e">getAllUserNames</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;c:\\test.xml&#34;</span><span style="color:#f92672">);</span>  
+    <span style="color:#f92672">}</span>  
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="17-把-array-转换成-map">17. 把 Array 转换成 Map</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.Map<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> org.apache.commons.lang.ArrayUtils<span style="color:#f92672">;</span>  
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>  
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+    String<span style="color:#f92672">[][]</span> countries <span style="color:#f92672">=</span> <span style="color:#f92672">{</span> <span style="color:#f92672">{</span> <span style="color:#e6db74">&#34;United States&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;New York&#34;</span> <span style="color:#f92672">},</span> <span style="color:#f92672">{</span> <span style="color:#e6db74">&#34;United Kingdom&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;London&#34;</span> <span style="color:#f92672">},</span>  
+        <span style="color:#f92672">{</span> <span style="color:#e6db74">&#34;Netherland&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Amsterdam&#34;</span> <span style="color:#f92672">},</span> <span style="color:#f92672">{</span> <span style="color:#e6db74">&#34;Japan&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Tokyo&#34;</span> <span style="color:#f92672">},</span> <span style="color:#f92672">{</span> <span style="color:#e6db74">&#34;France&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Paris&#34;</span> <span style="color:#f92672">}</span> <span style="color:#f92672">};</span>  
+
+    Map countryCapitals <span style="color:#f92672">=</span> ArrayUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">toMap</span><span style="color:#f92672">(</span>countries<span style="color:#f92672">);</span>  
+
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Capital of Japan is &#34;</span> <span style="color:#f92672">+</span> countryCapitals<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Japan&#34;</span><span style="color:#f92672">));</span>  
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Capital of France is &#34;</span> <span style="color:#f92672">+</span> countryCapitals<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;France&#34;</span><span style="color:#f92672">));</span>  
+  <span style="color:#f92672">}</span>  
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="18-发送邮件">18. 发送邮件</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> javax.mail.*<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> javax.mail.internet.*<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> java.util.*<span style="color:#f92672">;</span>  
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">postMail</span><span style="color:#f92672">(</span> String recipients<span style="color:#f92672">[</span> <span style="color:#f92672">],</span> String subject<span style="color:#f92672">,</span> String message <span style="color:#f92672">,</span> String from<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> MessagingException  
+<span style="color:#f92672">{</span>  
+    <span style="color:#66d9ef">boolean</span> debug <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>  
+
+     <span style="color:#75715e">//Set the host smtp address  
+</span><span style="color:#75715e"></span>     Properties props <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Properties<span style="color:#f92672">();</span>  
+     props<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;mail.smtp.host&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;smtp.example.com&#34;</span><span style="color:#f92672">);</span>  
+
+    <span style="color:#75715e">// create some properties and get the default Session  
+</span><span style="color:#75715e"></span>    Session session <span style="color:#f92672">=</span> Session<span style="color:#f92672">.</span><span style="color:#a6e22e">getDefaultInstance</span><span style="color:#f92672">(</span>props<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>  
+    session<span style="color:#f92672">.</span><span style="color:#a6e22e">setDebug</span><span style="color:#f92672">(</span>debug<span style="color:#f92672">);</span>  
+
+    <span style="color:#75715e">// create a message  
+</span><span style="color:#75715e"></span>    Message msg <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MimeMessage<span style="color:#f92672">(</span>session<span style="color:#f92672">);</span>  
+
+    <span style="color:#75715e">// set the from and to address  
+</span><span style="color:#75715e"></span>    InternetAddress addressFrom <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> InternetAddress<span style="color:#f92672">(</span>from<span style="color:#f92672">);</span>  
+    msg<span style="color:#f92672">.</span><span style="color:#a6e22e">setFrom</span><span style="color:#f92672">(</span>addressFrom<span style="color:#f92672">);</span>  
+
+    InternetAddress<span style="color:#f92672">[]</span> addressTo <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> InternetAddress<span style="color:#f92672">[</span>recipients<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">];</span>  
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> recipients<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>  
+    <span style="color:#f92672">{</span>  
+        addressTo<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> InternetAddress<span style="color:#f92672">(</span>recipients<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>  
+    <span style="color:#f92672">}</span>  
+    msg<span style="color:#f92672">.</span><span style="color:#a6e22e">setRecipients</span><span style="color:#f92672">(</span>Message<span style="color:#f92672">.</span><span style="color:#a6e22e">RecipientType</span><span style="color:#f92672">.</span><span style="color:#a6e22e">TO</span><span style="color:#f92672">,</span> addressTo<span style="color:#f92672">);</span>  
+
+    <span style="color:#75715e">// Optional : You can also set your custom headers in the Email if you Want  
+</span><span style="color:#75715e"></span>    msg<span style="color:#f92672">.</span><span style="color:#a6e22e">addHeader</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;MyHeaderName&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;myHeaderValue&#34;</span><span style="color:#f92672">);</span>  
+
+    <span style="color:#75715e">// Setting the Subject and Content Type  
+</span><span style="color:#75715e"></span>    msg<span style="color:#f92672">.</span><span style="color:#a6e22e">setSubject</span><span style="color:#f92672">(</span>subject<span style="color:#f92672">);</span>  
+    msg<span style="color:#f92672">.</span><span style="color:#a6e22e">setContent</span><span style="color:#f92672">(</span>message<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;text/plain&#34;</span><span style="color:#f92672">);</span>  
+    Transport<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">(</span>msg<span style="color:#f92672">);</span>  
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="19-发送代数据的http-请求">19. 发送代数据的HTTP 请求</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.io.BufferedReader<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> java.io.InputStreamReader<span style="color:#f92672">;</span>  
+<span style="color:#f92672">import</span> java.net.URL<span style="color:#f92672">;</span>  
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>  
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span>  <span style="color:#f92672">{</span>  
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>  
+            URL my_url <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http://coolshell.cn/&#34;</span><span style="color:#f92672">);</span>  
+            BufferedReader br <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> InputStreamReader<span style="color:#f92672">(</span>my_url<span style="color:#f92672">.</span><span style="color:#a6e22e">openStream</span><span style="color:#f92672">()));</span>  
+            String strTemp <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>  
+            <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span> <span style="color:#f92672">!=</span> <span style="color:#f92672">(</span>strTemp <span style="color:#f92672">=</span> br<span style="color:#f92672">.</span><span style="color:#a6e22e">readLine</span><span style="color:#f92672">())){</span>  
+                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>strTemp<span style="color:#f92672">);</span>  
+            <span style="color:#f92672">}</span>  
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+            ex<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>  
+        <span style="color:#f92672">}</span>  
+    <span style="color:#f92672">}</span>  
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="20-改变数组的大小">20. 改变数组的大小</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/** 
+</span><span style="color:#75715e">* Reallocates an array with a new size, and copies the contents 
+</span><span style="color:#75715e">* of the old array to the new array. 
+</span><span style="color:#75715e">* @param oldArray  the old array, to be reallocated. 
+</span><span style="color:#75715e">* @param newSize   the new array size. 
+</span><span style="color:#75715e">* @return          A new array with the same contents. 
+</span><span style="color:#75715e">*/</span> 
+<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Object <span style="color:#a6e22e">resizeArray</span> <span style="color:#f92672">(</span>Object oldArray<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> newSize<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+    <span style="color:#66d9ef">int</span> oldSize <span style="color:#f92672">=</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">.</span><span style="color:#a6e22e">reflect</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getLength</span><span style="color:#f92672">(</span>oldArray<span style="color:#f92672">);</span>  
+    Class elementType <span style="color:#f92672">=</span> oldArray<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getComponentType</span><span style="color:#f92672">();</span>  
+    Object newArray <span style="color:#f92672">=</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">.</span><span style="color:#a6e22e">reflect</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">.</span><span style="color:#a6e22e">newInstance</span><span style="color:#f92672">(</span>elementType<span style="color:#f92672">,</span>newSize<span style="color:#f92672">);</span>  
+    <span style="color:#66d9ef">int</span> preserveLength <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>oldSize<span style="color:#f92672">,</span>newSize<span style="color:#f92672">);</span>  
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>preserveLength <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span>  
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">arraycopy</span> <span style="color:#f92672">(</span>oldArray<span style="color:#f92672">,</span>0<span style="color:#f92672">,</span>newArray<span style="color:#f92672">,</span>0<span style="color:#f92672">,</span>preserveLength<span style="color:#f92672">);</span>  
+        <span style="color:#66d9ef">return</span> newArray<span style="color:#f92672">;</span>  
+    <span style="color:#f92672">}</span>  
+
+<span style="color:#75715e">// Test routine for resizeArray().  
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span>2<span style="color:#f92672">,</span>3<span style="color:#f92672">};</span>  
+    a <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[])</span>resizeArray<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span>5<span style="color:#f92672">);</span>  
+    a<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 4<span style="color:#f92672">;</span>  
+    a<span style="color:#f92672">[</span>4<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span>  
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i<span style="color:#f92672">&lt;</span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span>  
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>  
+<span style="color:#f92672">}</span>   
+</code></pre></div><blockquote>
+<p>引用原文https://zhuanlan.zhihu.com/p/28140439
+原文代码格式有点乱，稍作调整</p>
+</blockquote>
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fjavaprogramfragment%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fjavaprogramfragment%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fjavaprogramfragment%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fjavaprogramfragment%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fjavaprogramfragment%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fjavaprogramfragment%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://gdzhu8023.github.io/post/buildblog/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://gdzhu8023.github.io/post/buildblog/">在Github使用Hugo搭建个人博客</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://gdzhu8023.github.io/post/javamapuse/">Java Map的几种遍历方式</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://gdzhu8023.github.io/post/javamapuse/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'gdzhu8023';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://gdzhu8023.github.io/js/ui.js"></script>
+<script src="https://gdzhu8023.github.io/js/menus.js"></script>
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-103593285-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+<script src="https://gdzhu8023.github.io/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
+</html>
+

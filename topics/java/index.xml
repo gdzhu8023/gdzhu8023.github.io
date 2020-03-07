@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on 浮世尘烟</title>
+    <link>https://gdzhu8023.github.io/topics/java/</link>
+    <description>Recent content in java on 浮世尘烟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 02 Sep 2017 23:58:32 +0800</lastBuildDate>
+    
+	<atom:link href="https://gdzhu8023.github.io/topics/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java程序员面试，基础真的很重要</title>
+      <link>https://gdzhu8023.github.io/post/javabasetolearn/</link>
+      <pubDate>Sat, 02 Sep 2017 23:58:32 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/javabasetolearn/</guid>
+      <description>&lt;h1 id=&#34;java程序员面试基础真的很重要&#34;&gt;Java程序员面试，基础真的很重要&lt;/h1&gt;
+&lt;p&gt;基础这东西，各个公司都很看重，尤其是大公司，他们看中人的潜力，他们舍得花精力去培养，所以基础是重中之重。&lt;br&gt;
+留作备用，慢慢复习填充。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java Map的几种遍历方式</title>
+      <link>https://gdzhu8023.github.io/post/javamapuse/</link>
+      <pubDate>Sat, 05 Aug 2017 22:07:23 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/javamapuse/</guid>
+      <description>&lt;p&gt;Java中Map的几种遍历方式&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>20个非常有用的Java程序片段</title>
+      <link>https://gdzhu8023.github.io/post/javaprogramfragment/</link>
+      <pubDate>Mon, 31 Jul 2017 22:18:13 +0800</pubDate>
+      
+      <guid>https://gdzhu8023.github.io/post/javaprogramfragment/</guid>
+      <description>&lt;p&gt;下面是20个非常有用的Java程序片段，希望能对你有用。&lt;/p&gt;
+
+
+&lt;div class=&#34;pure-g&#34;&gt;
+
+  
+  
+  
+  
+  &lt;div class=&#34;pure-u-1-1&#34;&gt;
+    &lt;div style=&#34;padding: 0 .2em&#34;&gt;
+      &lt;img
+        class=&#34;pure-img-responsive&#34;
+        src=&#34;https://gdzhu8023.github.io/post/img/javaprogramfragment/java.jpg&#34;
+        alt=&#34; Img of java&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

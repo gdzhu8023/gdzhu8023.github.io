@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.65.2" />
+
+  <title>Git常用命令笔记 &middot; 浮世尘烟</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://gdzhu8023.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://gdzhu8023.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://gdzhu8023.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://gdzhu8023.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://gdzhu8023.github.io/">Menu</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/topics/"><i class='fa fa-folder fa-fw'></i>Topics</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://gdzhu8023.github.io/tags/"><i class='fa fa-tags fa-fw'></i>Tags</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/MaTure_Zhu_GD" rel="me" target="_blank"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://facebook.com/de.found.5" rel="me" target="_blank"><i class="fab fa-facebook-square fa-fw"></i>Facebook</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="http://weibo.com/2760705767" rel="me" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://instagram.com/inuslover" rel="me" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/gdzhu8023" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2017. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Git常用命令笔记</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>29 Jul 2017, 17:22</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://gdzhu8023.github.io/topics/note">Note</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://gdzhu8023.github.io/tags/2017-07">2017-07</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  <h1 id="git常用命令笔记">Git常用命令笔记</h1>
+<p>Git是什么？</p>
+<p>Git是目前世界上最先进的分布式版本控制系统（没有之一）。</p>
+<p>Git有什么特点？简单来说就是：高端大气上档次！</p>
+<p>那什么是版本控制系统？  好了，别闹~</p>
+<h2 id="安装配置">安装配置</h2>
+<ol>
+<li>
+<p>安装完成后，还需要最后一步设置，在命令行输入：</p>
+<pre><code>$ git config --global user.name &quot;Your Name&quot;
+$ git config --global user.email &quot;email@example.com&quot;
+</code></pre></li>
+<li>
+<p>查看用户名和邮箱地址：</p>
+<pre><code>$ git config user.name
+$ git config user.email
+</code></pre></li>
+<li>
+<p>修改当前的project</p>
+<ul>
+<li>git 修改当前的project的用户名的命令为：</li>
+</ul>
+<pre><code>git config user.name 你的目标用户名;
+</code></pre><ul>
+<li>git 修改当前的project提交邮箱的命令为：</li>
+</ul>
+<pre><code>git config user.email 你的目标邮箱名;
+</code></pre></li>
+</ol>
+<hr>
+<h2 id="创建版本库">创建版本库</h2>
+<ol>
+<li>
+<p><code>git init</code> 命令把这个目录变成Git可以管理的仓库：</p>
+<pre><code>$ git init
+Initialized empty Git repository in /Users/michael/learngit/.git/
+</code></pre></li>
+<li>
+<p><code>git status</code> 仓库当前的状态</p>
+</li>
+<li>
+<p><code>git diff</code> 顾名思义就是查看difference</p>
+</li>
+<li>
+<p><code>git add</code>  加文件</p>
+<ul>
+<li><code>git add -A</code>  提交所有变化</li>
+<li><code>git add -u</code>  提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)</li>
+<li><code>git add . </code>  提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件</li>
+</ul>
+</li>
+<li>
+<p><code>git commit</code> 告诉Git，把文件提交到仓库</p>
+<pre><code>$ git commit -m &quot;hello world&quot;
+</code></pre></li>
+<li>
+<p><code>git log</code>  命令显示从最近到最远的提交日志`</p>
+<ul>
+<li>加上 <code>--pretty=oneline</code> 参数</li>
+<li>git log &ndash;pretty=oneline</li>
+</ul>
+<pre><code>$ git log --pretty=oneline
+3628164fb26d48395383f8f31179f24e0882e1e0 append GPL
+ea34578d5496d7dd233c827ed32a8cd576c5ee85 add distributed
+cb926e7ea50ad11b8f9e909c05226233bf755030 wrote a readme file
+</code></pre></li>
+<li>
+<p><code>git reset --hard commit_id</code> 回退到版本<br>
+在Git中，用<code>HEAD</code>表示当前版本，也就是最新的提交<code>3628164...882e1e0</code>（注意我的提交ID和你的肯定不一样），上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，当然往上100个版本写100个^比较容易数不过来，所以写成<code>HEAD~100</code>。</p>
+<pre><code>$ git reset --hard HEAD^
+HEAD is now at ea34578 add distributed
+</code></pre></li>
+<li>
+<p><code>git reflog</code> 要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。</p>
+</li>
+<li>
+<p><code>git checkout -- file</code>可以丢弃工作区的修改</p>
+<ul>
+<li>就是让这个文件回到最近一次<code>git commit</code>或<code>git add</code>时的状态</li>
+<li><code>git checkout --  file</code>  命令中的<code>--</code>很重要，没<code>有--</code>，就变成了“切换到另一个分支”的命令，我们在后面的分支管理中会再次遇到git checkout命令。</li>
+</ul>
+</li>
+<li>
+<p><code>git reset HEAD file</code>可以把暂存区的修改撤销掉（unstage），重新放回工作区</p>
+</li>
+<li>
+<p><code>git rm</code>删掉，并且<code>git commit</code><br>
+从版本库中删除该文件</p>
+</li>
+<li>
+<p>删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：</p>
+<pre><code>$ git checkout -- test.txt
+</code></pre><p><code>git checkout</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</p>
+</li>
+</ol>
+<hr>
+<h2 id="远程仓库">远程仓库</h2>
+<ol>
+<li>
+<p>创建SSH Key。</p>
+<pre><code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
+ssh-keygen -t rsa -C &quot;defound@outlook.com&quot;
+</code></pre></li>
+<li>
+<p>关联一个远程库，使用命令</p>
+<pre><code>$ git remote add origin git@github.com:michaelliao/learngit.git
+</code></pre></li>
+<li>
+<p>第一次推送master分支的所有内容,把本地库的所有内容推送到远程库上：</p>
+<pre><code>git push -u origin master
+</code></pre></li>
+<li>
+<p>每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；</p>
+<pre><code>git push origin master
+</code></pre></li>
+<li>
+<p><code>git clone</code>  克隆一个本地库</p>
+<pre><code>$ git clone git@github.com:michaelliao/gitskills.git
+Cloning into 'gitskills'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (3/3), done.
+
+$ cd gitskills
+$ ls
+README.md
+</code></pre></li>
+<li>
+<p>查看当前的远程库<br>
+要查看当前配置有哪些远程仓库，可以用命令：</p>
+<pre><code>git remote
+</code></pre></li>
+<li>
+<p>提取远程仓库
+Git 有两个命令用来提取远程仓库的更新。</p>
+<ul>
+<li>
+<p>从远程仓库下载新分支与数据：</p>
+<pre><code>git fetch
+</code></pre></li>
+</ul>
+<p>该命令执行完后需要执行git merge 远程分支到你所在的分支。</p>
+<ul>
+<li>
+<p>从远端仓库提取数据并尝试合并到当前分支：</p>
+<pre><code>git pull
+</code></pre></li>
+</ul>
+<p>该命令就是在执行 git fetch 之后紧接着执行 git merge 远程分支到你所在的任意分支。<br>
+假设你配置好了一个远程仓库，并且你想要提取更新的数据，你可以首先执行 git fetch [alias] 告诉 Git 去获取它有你没有的数据，然后你可以执行 git merge [alias]/[branch] 以将服务器上的任何更新（假设有人这时候推送到服务器了）合并到你的当前分支。</p>
+</li>
+<li>
+<p>删除远程仓库</p>
+<pre><code>git remote rm [别名]
+</code></pre></li>
+<li>
+<p>实例</p>
+<pre><code>$ git remote -v
+origin	git@github.com:tianqixin/runoob-git-test.git (fetch)
+origin	git@github.com:tianqixin/runoob-git-test.git (push)
+
+# 添加仓库 origin2
+$ git remote add origin2 git@github.com:tianqixin/runoob-git-test.git
+
+$ git remote -v
+origin	git@github.com:tianqixin/runoob-git-test.git (fetch)
+origin	git@github.com:tianqixin/runoob-git-test.git (push)
+origin2	git@github.com:tianqixin/runoob-git-test.git (fetch)
+origin2	git@github.com:tianqixin/runoob-git-test.git (push)
+
+# 删除仓库 origin2
+$ git remote rm origin2
+$ git remote -v
+origin	git@github.com:tianqixin/runoob-git-test.git (fetch)
+origin	git@github.com:tianqixin/runoob-git-test.git (push)
+</code></pre></li>
+</ol>
+<hr>
+<h2 id="分支管理">分支管理</h2>
+<h3 id="创建与合并分支">创建与合并分支</h3>
+<p>Git鼓励大量使用分支：</p>
+<ol>
+<li>查看分支：<code>git branch</code></li>
+<li>创建分支：<code>git branch &lt;name&gt;</code></li>
+<li>切换分支：<code>git checkout &lt;name&gt;</code></li>
+<li>创建+切换分支：<code>git checkout -b &lt;name&gt;</code></li>
+<li>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></li>
+<li>删除分支：<code>git branch -d &lt;name&gt;</code></li>
+</ol>
+<h3 id="解决冲突">解决冲突</h3>
+<ol>
+<li><code>git log --graph</code> 命令可以看到分支合并图。</li>
+</ol>
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fusegit%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fusegit%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fusegit%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fusegit%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fusegit%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fgdzhu8023.github.io%2fpost%2fusegit%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://gdzhu8023.github.io/post/first/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://gdzhu8023.github.io/post/first/">First</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://gdzhu8023.github.io/post/buildblog/">在Github使用Hugo搭建个人博客</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://gdzhu8023.github.io/post/buildblog/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'gdzhu8023';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://gdzhu8023.github.io/js/ui.js"></script>
+<script src="https://gdzhu8023.github.io/js/menus.js"></script>
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-103593285-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+<script src="https://gdzhu8023.github.io/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
+</html>
+
